@@ -8,8 +8,14 @@
 int main()
 {
     srand(time(0));
-    int coinArray[4];
-    int change = getChange();
-    printf("The change is %d", change);
+
+    for(int i = 0; i < 10; i++)
+    {
+        int coinArray[4] = {0};
+        int change = getChange();
+        printf("The change is %d\n", change);
+        minChange(change, coinArray);
+        printMinChange(coinArray);
+    }
     return 0;
 }
